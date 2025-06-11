@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eee;
+  font-family: sans-serif;
+}
+
+.calculator {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 240px;
+}
+
+#display {
+  width: 100%;
+  height: 40px;
+  font-size: 1.2rem;
+  text-align: right;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem; /* Add horizontal and vertical padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Makes padding not break layout */
+}
+
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+button {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  background: #ddd;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #bbb;
+}
+
+#clear {
+  grid-column: span 4;
+  background: #ff4d4d;
+  color: white;
+}
