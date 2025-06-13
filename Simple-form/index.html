@@ -41,7 +41,7 @@
 
   <div class="form-container">
     <h2>Contact Us</h2>
-    <form onsubmit="handleSubmit(event)">
+    <form onsubmit="handleSubmit(event)"> <!-- onsubmit allows for no event listener -->
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
 
@@ -67,3 +67,19 @@
 
 </body>
 </html>
+
+<!-- 
+<form id="contactForm">
+</form>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', handleSubmit);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    document.getElementById('response').textContent = `Thank you, ${name}! Your message has been sent.`;
+    event.target.reset();
+  }
+</script>
+-->
